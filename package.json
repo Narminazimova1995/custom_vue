@@ -1,0 +1,37 @@
+{
+  "name": "admin.palet",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "apexcharts": "^3.35.0",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.1",
+    "dhtmlx-gantt": "^8.0.6",
+    "docx": "^8.5.0",
+    "element-plus": "^2.1.11",
+    "eslint": "^8.2.0",
+    "eslint-plugin-vue": "^8.1.1",
+    "file-saver": "^2.0.5",
+    "html2pdf.js": "^0.10.1",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "sass": "^1.43.4",
+    "vue": "^3.2.16",
+    "vue-outside-events": "^1.1.3",
+    "vue-router": "4",
+    "vue-tippy": "v6",
+    "vue3-apexcharts": "^1.4.1",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@tinymce/tinymce-vue": "^5.0.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/compiler-sfc": "^3.2.22",
+    "vite": "^2.6.4"
+  }
+}
