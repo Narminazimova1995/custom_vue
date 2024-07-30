@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid search">
-    <el-row class="mt-15" >
+    <el-row >
       <el-col :span="3">
         <el-input v-model="search" placeholder="Type to search"/>
       </el-col>
     </el-row>
   </div>
-  <div class="container-fluid pt-0">
+  <div class="container-fluid">
     <el-table
         v-loading="loading"
         :data="SearchFly"
@@ -102,6 +102,7 @@ export default {
               !this.search ||
               data.carrieR_3?.toLowerCase().includes(this.search.toLowerCase()) ||
               data.flighT_NO?.toLowerCase().includes(this.search.toLowerCase()) ||
+              data.desT_AP_CODE?.toLowerCase().includes(this.search.toLowerCase()) ||
               data.oriG_AP_NAME?.toLowerCase().includes(this.search.toLowerCase()) ||
               data.schedulE_DATE?.toLowerCase().includes(this.search.toLowerCase()) ||
               data.conN_TYPE?.toLowerCase().includes(this.search.toLowerCase()) ||
