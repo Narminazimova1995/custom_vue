@@ -56,8 +56,8 @@ const { pagination, setPagination, currentPage, perPage, perPageCounts } = usePa
 export default {
   name: 'Etv',
   data () {
-    const fourHoursAgo = new Date(Date.now())
-    const twelveHourAfter = new Date(Date.now() + 16 * 60 * 60 * 1000)
+    const fourHoursAgo = new Date(Date.now()-2*60*60*1000)
+    const twelveHourAfter = new Date(Date.now() + 10 * 60 * 60 * 1000)
     const st_from = fourHoursAgo.toISOString().slice(0, 16).replace('T', ' ')
     const end_to = twelveHourAfter.toISOString().slice(0, 16).replace('T', ' ')
     console.log(fourHoursAgo + ' ' + twelveHourAfter + ' ' + st_from + ' ' + end_to + ' ')
@@ -79,6 +79,7 @@ export default {
       this.loading = true
       try {
         const { data: FlightData } = await homeService.getLMainFlightList(this.dateFlight)
+        FlightData.sort((a, b) => new Date(a.schedulE_DATE) - new Date(b.schedulE_DATE))
         this.allMainFlightList = FlightData
         this.editItem = this.allMainFlightList
         console.log(FlightData)
